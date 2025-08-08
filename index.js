@@ -18,3 +18,22 @@ function scrollReveal() {
 
 window.addEventListener("scroll", scrollReveal);
 scrollReveal(); // trigger di awal saat halaman dimuat
+
+  // Fungsi untuk semua menu yang pakai scroll
+  document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // cegah default behaviour
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+
+      // Hapus hash dari URL
+      history.replaceState(null, null, ' ');
+    });
+  });
+
