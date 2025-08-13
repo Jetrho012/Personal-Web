@@ -20,9 +20,3 @@
     transform: translateY(0);
   }
 
-.profile-img {
-      width: 150px;
-      height: 50px;
-      object-fit: cover;
-    }
-
