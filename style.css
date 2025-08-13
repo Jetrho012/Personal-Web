@@ -19,3 +19,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+.profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
